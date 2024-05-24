@@ -54,14 +54,7 @@ if(!empty($_POST['color'])){
   
    
   }
-
-
 ?>
-<!-- 1 dan N gacha bo’lgan toq sonlarni ekranga chiqaring -->
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -117,6 +110,52 @@ if(!empty($_POST['color'])){
                    }
                   }
                   } ?>
+            </div>
+        </div>
+        <div class="col-md-12 mt-5">
+            <div class="card-header bg-succes">
+            1 dan N gacha sonlar ichida 5 ga karralilarini ekranga chiqarish
+            </div>
+            <form method="post">
+                <input type="text" class="form-control m2" name="Son">
+            </form>
+            <div class="card-footer bg-dark text-white mt-2">
+                <?php 
+                  if (!empty($_POST['Son'])) {
+                    // Foydalanuvchi kiritgan N qiymatini olish
+                    $Son = $_POST['Son'];
+                
+                    // 1 dan boshlab N gacha bo'lgan 5ga karrali sonlarni topish
+                    for ($i = 1; $i <= $Son; $i++) {
+                        if ($i % 5 == 0) {
+                            echo $i . "&nbsp;";
+                        }
+                    }
+                }?>
+            </div>
+        </div>
+        <div class="col-md-12 mt-5">
+            <div class="card-header bg-succes">
+            1 dan N gacha sonlar ichida 7 ga karralilarini yig'indisi ekranga chiqarish
+            </div>
+            <form method="post">
+                <input type="text" class="form-control m2" name="S1">
+            </form>
+            <div class="card-footer bg-dark text-white mt-2">
+                <?php 
+                    $count = 0;
+
+                  if (!empty($_POST['S1']) ) {
+                    // Foydalanuvchi kiritgan N qiymatini olish
+                    $S1 = $_POST['S1'];
+                    // 1 dan boshlab N gacha bo'lgan 5ga karrali sonlarni topish
+                    for ($i = 1; $i <= $S1; $i++) {
+                        if ($i % 7 == 0) {
+                            $count+= $i ;
+                        }
+                    }
+                    echo  $count;
+                }?>
             </div>
         </div>
     </div>
