@@ -46,7 +46,6 @@ if(!empty($_POST['color'])){
         case 'yellow':
            $movement = 'prepare';
             break;
-      
          default:
              $movement = ' Bunday rang yoq ' ;
              break;
