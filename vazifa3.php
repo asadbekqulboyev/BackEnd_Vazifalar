@@ -38,8 +38,6 @@ function isRightTriangle($a, $b, $c) {
     return pow($sides[0], 2) + pow($sides[1], 2) == pow($sides[2], 2);
 }
 
-
-
 $uchburchakTomon = '';
 $Perimetr = '';
 $Yuza = '';
@@ -51,16 +49,13 @@ if (isTriangle($Uch1, $Uch2, $Uch3)) {
     $Perimetr =  "Perimetri: $perimeter\n";
     $Yuza = "Yuzasi: $area\n";
     $togri = isRightTriangle($Uch1, $Uch2, $Uch3) ? 'ha' : 'yo\'q';
-
 } else {
     $uchburchakTomon = "Ushbu tomonlar uchburchak hosil qilmaydi.";
 }
 
-
-
 $Natija = '';
 function solveQuadraticEquation($a, $b, $c) {
-
+ global $Natija;
     // Diskriminantni hisoblash
     $D = $b * $b - 4 * $a * $c;
     
@@ -74,16 +69,15 @@ function solveQuadraticEquation($a, $b, $c) {
        return $Natija = "Bitta haqiqiy ildiz mavjud: x = $root";
     } else {
        return $Natija = "Haqiqiy ildizlar mavjud emas.";
-    };
- 
+    }; 
     return $Natija;
 }
 $a = 1;
 $b= 2;
 $c = 4;
 if(!empty($_POST['A']) ){
-    $a = $_POST['A'];
-    };
+ $a = $_POST['A'];
+};
 if(!empty( $_POST['B'])){
     $b = $_POST['B'];
 };
@@ -113,7 +107,6 @@ function SvetoforFunc($chroqRangi, $movement){
     };
  return $movement;
  }
-
 // # 4.Funksiya yarating, funksiyada foydalanuvchidan uning yoshini so’rang va yoshiga qarab, agar 18 dan kichik bo’ladigan bo’lsa , “balog’at yoshiga yetmabsiz”, 18 va 30 orasida bo’lsa - “Hali yosh ekansiz”, 30 – 40 orasida bo’lsa – “Ga’yrat qiling!”, 40-50 – “Hali hammasi oldinda” , 50-70 – “Nevaralardan nechta?”, 70-80 – “Pensiya qancha?”, “80-100” – “Ehee to’y qachon?”. Larni Ekranga chiqaring chiqazing.
 $yosh = 0;
 $result = '';
@@ -151,7 +144,6 @@ $endNumber = 0;
 if(!empty($_POST['RecursivNumber'])){
 $endNumber = $_POST['RecursivNumber'];
 }
-
 function factorial($endNumber) {
     // Bazaviy holat: 1 yoki 0 bo'lsa, natija 1
     if ($endNumber <= 1) {
@@ -161,10 +153,8 @@ function factorial($endNumber) {
         return $endNumber * factorial($endNumber - 1);
     }
 }
-
 // 10 gacha bo'lgan sonlarning ko'paytmasi
 $result = factorial($endNumber);
-
 ?>
 <!DOCTYPE html>
 <html lang="en">

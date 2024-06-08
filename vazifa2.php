@@ -157,6 +157,57 @@ if(!empty($_POST['color'])){
                 }?>
             </div>
         </div>
+         <!-- 10 -->
+         <div class="col-md-12 mt-5">
+            <div class="card-header bg-succes">
+            11 dan na gacha bo’lgan juft sonlarning kvadratlarining yig’indisini hisoblovchi dastur yarating
+            </div>
+            <form method="post">
+                <input type="text" class="form-control m2" name="KV">
+            </form>
+            <div class="card-footer bg-dark text-white mt-2">
+                <?php 
+                  $countKv = 0;
+                  if (!empty($_POST['KV']) ) {
+                    // Foydalanuvchi kiritgan N qiymatini olish
+                    $KV = $_POST['KV'];
+                    // 1 dan boshlab N gacha bo'lgan 5ga karrali sonlarni topish
+                    for ($i = 1; $i <= $KV; $i++) {
+                        if ($i % 2 == 0) {
+                         $countKv = $countKv + pow($i,2);
+                        }
+                    }
+                    echo  $countKv;
+                }?>
+            </div>
+        </div>
+        <!-- 11 -->
+        <div class="col-md-12 mt-5">
+            <div class="card-header bg-succes">
+            11 Kiritilgan son Xonalari sonini  va  Xonalar raqamlarining Yig'indisini Hisoblovchi dastur
+            </div>
+            <form method="post">
+                <input type="text" class="form-control m2" name="Numbers">
+            </form>
+            <div class="card-footer bg-dark text-white mt-2">
+                <?php 
+                  $natijaAll = 0;
+                  if (!empty($_POST['Numbers']) ) {
+                    // Foydalanuvchi kiritgan N qiymatini olish
+                    $Numbers = $_POST['Numbers'];
+                    $sums = 0;
+                    $counts = 0;
+                    while($Numbers>=1){
+                        $innerNumber =  (int)$Numbers%10;
+                        $sums+=$innerNumber;
+                        $counts++;
+                        $Numbers= (int)$Numbers/10;
+                    }
+                    $natijaAll = "$counts $sums ";
+                    echo  $natijaAll;
+                }?>
+            </div>
+        </div>
     </div>
 
 </body>
