@@ -64,7 +64,21 @@ if(!empty($_POST['color'])){
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
+<header class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1>Birinchi vazifa </h1>
+            <div class="d-flex justify-content-center mt-2">
+            <nav aria-label="Page navigation example ">
+                <ul class="pagination ">
+                  <li class="page-item "><a class="page-link " href="./vazifa1.php">1</a></li>
+                  <li class="page-item active"><a class="page-link" href="./vazifa2.php">2</a></li>
+                  <li class="page-item"><a class="page-link" href="./vazifa3.php">3</a></li>
+                </ul>
+              </nav>
+            </div>
+        </div>
+    </header>
+    <div class="container mt-2">
         <div class="col-md-12">
             <div class="card-header bg-succes">
             1 dan 7 gacha raqam kiriting 
@@ -184,7 +198,7 @@ if(!empty($_POST['color'])){
         <!-- 11 -->
         <div class="col-md-12 mt-5">
             <div class="card-header bg-succes">
-            11 Kiritilgan son Xonalari sonini  va  Xonalar raqamlarining Yig'indisini Hisoblovchi dastur
+            #11. Kiritilgan son raqamlar sonini  va  Xonalar raqamlarining Yig'indisini Hisoblash
             </div>
             <form method="post">
                 <input type="text" class="form-control m2" name="Numbers">
@@ -203,7 +217,7 @@ if(!empty($_POST['color'])){
                         $counts++;
                         $Numbers= (int)$Numbers/10;
                     }
-                    $natijaAll = "$counts $sums ";
+                    $natijaAll = "Rqami : $counts  Raqamlar Yig'indisi: $sums ";
                     echo  $natijaAll;
                 }?>
             </div>
