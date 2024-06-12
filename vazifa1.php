@@ -96,22 +96,29 @@ if ($C3 < $C1) {
 }
 
 //  6.Kvadrat tenglamani hisoblovchi dastur yarating. ax2+bx+c=0 tenglama kvadrat tenglama deyiladi. Kvadrat tenglamaning yechimlari uning diskriminantiga bog`liq. D = b2+4*a*c; Agar discriminant 0 dan kichik bo’lsa, kvadrat tenglamaning yechimlari mavjud emas, agar discriminant 0 ga teng boladigan bo`lsa, kvadrat tenglamaning yechimi bitta: 
-$results = '' ;
+$DescNatija ='';
 if( !empty($_POST["qiymatA"]) && !empty($_POST["qiymatB"]) && !empty($_POST["qiymatC"])){
   $qiymatA = $_POST["qiymatA"];
   $qiymatB= $_POST["qiymatB"];
   $qiymatC= $_POST["qiymatC"];
   // descriminant
-  $D = ($qiymatB**2)-(4*$qiymatA*$qiymatC);
- 
-  if($D < 0){
-   $results = 'Yechimga ega emas';
-  }else if($D == 0){
-    $results = 'Yechimi bitta';
-  }else{
-    $results = 'xatolik';
-  }
+  // Diskriminantni hisoblash
+  $D = $qiymatA * $qiymatB- 4 * $qiymatA * $qiymatC;
+    
+  // Diskriminant qiymatiga qarab natijani chiqarish
+  if ($D > 0) {
+      $root1 = (-$qiymatB + sqrt($D)) / (2 * $qiymatA);
+      $root2 = (-$qiymatB - sqrt($D)) / (2 * $qiymatA);
+     return $DescNatija = "Ikkita haqiqiy ildiz mavjud: x1 = $root1 va x2 = $root2";
+  } elseif ($D == 0) {
+      $root = -$qiymatB / (2 * $qiymatA);
+     return $DescNatija = "Bitta haqiqiy ildiz mavjud: x = $root";
+  } else {
+     return $DescNatija = "Haqiqiy ildizlar mavjud emas.";
+  }; 
+  return $DescNatija;
 }
+// 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -128,18 +135,18 @@ if( !empty($_POST["qiymatA"]) && !empty($_POST["qiymatB"]) && !empty($_POST["qiy
             <div class="d-flex justify-content-center mt-2">
             <nav aria-label="Page navigation example ">
                 <ul class="pagination ">
-                  <li class="page-item active"><a class="page-link " href="./vazifa1.php">1</a></li>
+                  <li class="page-item"><a class="page-link" href="./vazifa1.php">1</a></li>
                   <li class="page-item"><a class="page-link" href="./vazifa2.php">2</a></li>
                   <li class="page-item"><a class="page-link" href="./vazifa3.php">3</a></li>
+                  <li class="page-item"><a class="page-link" href="./vazifa4.php">4</a></li>
                 </ul>
               </nav>
             </div>
         </div>
     </header>
-
 <div class="container mt-5">
     <div class="row flex">
-      <div class="col-md-5">
+     <div class="col-md-5">
       <div class="card w-100">
          <div class="card-header">
             #1 . 3ta Sonning o'rta arfimetigini topish
@@ -351,29 +358,6 @@ if( !empty($_POST["qiymatA"]) && !empty($_POST["qiymatB"]) && !empty($_POST["qiy
             </div>
          </div>
          </div>
-     </div>
-     <!-- if else -->
-     <div class="col-md-5 mt-4">
-        <div class="card w-100">
-         <div class="card-header">
-        #6  Diskriminant
-         </div>
-          <div class="card-body">
-            <!-- 1 - form -->
-            <form method="post">
-                <input type="number" placeholder="A.." class="form-control"  name ="qiymatA" > 
-                <input type="number" placeholder="B.." class="form-control mt-2"  name ="qiymatB" > 
-                <input type="number" placeholder="B.." class="form-control mt-2"  name ="qiymatC" > 
-                <hr />
-                <button class="btn btn-succes bg-info">Hisoblash</button>
-            </form>
-            <!-- 1 - form -->
-            <div class="displa bg-info  p-2 mt-2" >
-            Diskriminant: <?php echo $results;  ?> 
-            </div>
-         </div>
-         </div>
-     </div>
      </div>
      </div>
 </body>

@@ -66,13 +66,14 @@ if(!empty($_POST['color'])){
 <body>
 <header class="bg-primary text-white text-center py-5">
         <div class="container">
-            <h1>Birinchi vazifa </h1>
+            <h1>Ikkinchi vazifa </h1>
             <div class="d-flex justify-content-center mt-2">
             <nav aria-label="Page navigation example ">
                 <ul class="pagination ">
-                  <li class="page-item "><a class="page-link " href="./vazifa1.php">1</a></li>
-                  <li class="page-item active"><a class="page-link" href="./vazifa2.php">2</a></li>
+                  <li class="page-item"><a class="page-link" href="./vazifa1.php">1</a></li>
+                  <li class="page-item"><a class="page-link" href="./vazifa2.php">2</a></li>
                   <li class="page-item"><a class="page-link" href="./vazifa3.php">3</a></li>
+                  <li class="page-item"><a class="page-link" href="./vazifa4.php">4</a></li>
                 </ul>
               </nav>
             </div>
@@ -119,7 +120,6 @@ if(!empty($_POST['color'])){
                       echo $i . "Juft" . '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
                    }else{
                       echo $i . "Toq" . '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
-    
                    }
                   }
                   } ?>
