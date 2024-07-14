@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>php vazifalar</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -20,7 +21,7 @@
                     <a class="nav-link" href="#about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#projects">Projects</a>
+                    <a class="nav-link" href="../project/index.php">Projects</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#skills">Skills</a>
@@ -41,16 +42,11 @@
                   <li class="page-item"><a class="page-link" href="./vazifa2.php">2</a></li>
                   <li class="page-item"><a class="page-link" href="./vazifa3.php">3</a></li>
                   <li class="page-item"><a class="page-link" href="./vazifa4.php">4</a></li>
+                  <li class="page-item"><a class="page-link" href="./vazifa5.php">5</a></li>
+                  <li class="page-item"><a class="page-link" href="./vazifa7.php">7</a></li>
+                  <li class="page-item"><a class="page-link" href="./vazifa8.php">8</a></li>
                 </ul>
               </nav>
             </div>
         </div>
     </header>
-    
-      
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
-</body>
-</html>

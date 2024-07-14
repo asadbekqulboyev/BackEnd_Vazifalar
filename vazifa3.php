@@ -25,12 +25,10 @@ function isTriangle($a, $b, $c) {
 function calculatePerimeter($a, $b, $c) {
     return $a + $b + $c;
 }
-
 function calculateArea($a, $b, $c) {
     $s = ($a + $b + $c) / 2; // Yarim perimetr
     return sqrt($s * ($s - $a) * ($s - $b) * ($s - $c));
 }
-
 function isRightTriangle($a, $b, $c) {
     // Tomonlarni tartiblang, shunda c eng katta bo'ladi
     $sides = [$a, $b, $c];
@@ -58,7 +56,6 @@ function solveQuadraticEquation($a, $b, $c) {
  global $Natija;
     // Diskriminantni hisoblash
     $D = $b * $b - 4 * $a * $c;
-    
     // Diskriminant qiymatiga qarab natijani chiqarish
     if ($D > 0) {
         $root1 = (-$b + sqrt($D)) / (2 * $a);
@@ -143,6 +140,7 @@ function Age ($age, $resultAge){
 $endNumber = 0;
 if(!empty($_POST['RecursivNumber'])){
 $endNumber = $_POST['RecursivNumber'];
+
 }
 function factorial($endNumber) {
     // Bazaviy holat: 1 yoki 0 bo'lsa, natija 1
@@ -155,31 +153,8 @@ function factorial($endNumber) {
 }
 // 10 gacha bo'lgan sonlarning ko'paytmasi
 $result = factorial($endNumber);
+require_once('./section/header.php')
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vazifa 3</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-<header class="bg-primary text-white text-center py-5">
-        <div class="container">
-            <h1>Uchinchi vazifa </h1>
-            <div class="d-flex justify-content-center mt-2">
-            <nav aria-label="Page navigation example ">
-                <ul class="pagination ">
-                  <li class="page-item"><a class="page-link" href="./vazifa1.php">1</a></li>
-                  <li class="page-item"><a class="page-link" href="./vazifa2.php">2</a></li>
-                  <li class="page-item"><a class="page-link" href="./vazifa3.php">3</a></li>
-                  <li class="page-item"><a class="page-link" href="./vazifa4.php">4</a></li>
-                </ul>
-              </nav>
-            </div>
-        </div>
-    </header>
     
     <div class="col-md-6 mt-5 mx-auto ">
            <h2>#1</h2>
