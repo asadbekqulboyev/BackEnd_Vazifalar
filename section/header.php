@@ -45,6 +45,7 @@
                   <li class="page-item"><a class="page-link" href="./vazifa5.php">5</a></li>
                   <li class="page-item"><a class="page-link" href="./vazifa7.php">7</a></li>
                   <li class="page-item"><a class="page-link" href="./vazifa8.php">8</a></li>
+                  <li class="page-item"><a class="page-link" href="./chat">Chat</a></li>
                 </ul>
               </nav>
             </div>
