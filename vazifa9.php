@@ -192,6 +192,7 @@ $chats = getMessages();
                             </div>  
                         </div>
                     <?php endforeach; ?>
+                    <?php endif; ?>
                 </div>
                 <form action="vazifa9.php" method="post" enctype="multipart/form-data">
                     <div class="mb-2">
