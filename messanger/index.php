@@ -3,16 +3,16 @@
     require_once "controller.php";
     // print_r($allMessage)
 ?>
-
 <!DOCTYPE html>
-
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uz Chat</title>
     <link rel="stylesheet" href="./assets/style/index.css">
+    <style>
+
+    </style>
 </head>
 <body>
     <div class="container py-5">
@@ -22,10 +22,10 @@
                     <div class="card-body">
                         <!-- message item -->
                         <?php if (!empty($allMessage)):?>
-                            <?php foreach($allMessage as $message):?>
+                        <?php foreach($allMessage as $message):?>
                         <div class="message_item">
                         <div class="avatar">
-                            <img src="" alt="">
+                        <img src="" alt="">
                         </div>
                         <div class="message_body">
                             <div class="meta">
@@ -34,8 +34,7 @@
                                     18:38
                                 </span>
                             </div>
-                            <div class="text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident beatae nobis ea vitae aliquid voluptate molestias exercitationem praesentium iusto quo?
+                            <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident beatae nobis ea vitae aliquid voluptate molestias exercitationem praesentium iusto quo?
                             </div>
                         </div>
                     </div>
